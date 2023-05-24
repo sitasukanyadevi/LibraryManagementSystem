@@ -77,7 +77,7 @@ namespace LMS.Tests
               
             int result = b.Students_Having_Books();
             // Assert
-            Assert.That(result, Is.EqualTo(3)); // assuming one student having books now
+            Assert.That(result, Is.EqualTo(3)); // assuming three student having books now
         }
 
 
