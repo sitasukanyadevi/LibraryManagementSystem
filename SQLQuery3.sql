@@ -36,27 +36,22 @@ drop table Book_Details
 
 CREATE TABLE Issued_Books
 (
-    Issue_ID int identity Primary key,
-    Book_ID int,
-	Student_RollNo int references Student_Details(Student_RollNo),
-    Issue_Book_Date Date
+Issue_ID int identity Primary key,
+Book_ID int,
+Student_RollNo int references Student_Details(Student_RollNo),
+Issue_Book_Date Date
 )
 
 select * from Issued_Books
 
 CREATE TABLE Returned_Books
 (
-    Return_ID int identity Primary Key,
-    Issue_ID int,
-	Student_RollNo int,
-	Book_ID int,
-    Return_Date date,
+Return_ID int identity Primary Key,
+Issue_ID int,
+Student_RollNo int,
+Book_ID int,
+Return_Date date,
 )
-
-drop table Returned_Books
-
-
-drop table Returned_Books
 
 select * from Student_Details
 select * from Book_Details

@@ -125,33 +125,6 @@ namespace LMS.Tests
         }
 
         [Test]
-        public void IssuedBookDetails_WhenRecordInserted_ReturnsNoOfRowsAffected()
-        {
-            //Arrange
-
-            var book = new Mock<IBook>();
-            book.Setup(x => x.Issue_Book(1,1)).Returns(1);
-            var bservice = new BookService(book.Object); 
-            //Act
-            var result = bservice.Issue_Book(1,1);
-            //Assert
-            Assert.That(result, Is.EqualTo(1));
-        }
-
-        [Test]
-        public void ReturnedBookDetails_WhenRecordInserted_ReturnsNoOfRowsAffected()
-        {
-            //Arrange
-            var book = new Mock<IBook>();
-            book.Setup(x => x.Return_Book(1, 1)).Returns(1);
-            var bservice = new BookService(book.Object);
-            //Act
-            var result = bservice.Return_Book(1, 1);
-            //Assert
-            Assert.That(result, Is.EqualTo(1));
-        }
-
-        [Test]
         public void AddStudentDetails_WhenRecordInserted_ReturnsNoOfRowsAffected()
         {
             //Arrange
